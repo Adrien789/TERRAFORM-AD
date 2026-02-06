@@ -19,6 +19,6 @@ resource "ovh_cloud_project_container" "mon_stockage" {
   service_name = "TON_PROJECT_ID" # L'ID de ton projet Public Cloud OVH
   region       = "GRA"            # Région Gravelines
   name         = "stockage-devops-output"
-  type         = "private"        # Peut être 'public' ou 'private'
+  type         = "private" # Peut être 'public' ou 'private'
 }
 
