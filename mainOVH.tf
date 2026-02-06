@@ -9,9 +9,9 @@ terraform {
 
 provider "ovh" {
   endpoint           = "ovh-eu"
-  application_key    = "afc5883b59c00038"
-  application_secret = "c994f8168c333e24c3e166b9cd9190a3"
-  consumer_key       = "dea278b169b4698ebedbb28d521b8d5b"
+  application_key    = "a9fcf21b6e16d630"
+  application_secret = "6526675320a3144f393e6c0785bffde4"
+  consumer_key       = "56884464cf6ea09a2480b3aacd550533"
 }
 
 # Création d'un container de stockage (Object Storage)
