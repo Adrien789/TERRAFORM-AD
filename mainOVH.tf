@@ -2,7 +2,7 @@ terraform {
   required_providers {
     ovh = {
       source  = "ovh/ovh"
-      version = "~> 0.43.0"
+      version = "~> 2.1"
     }
   }
 }
@@ -15,10 +15,12 @@ provider "ovh" {
 }
 
 # Création d'un container de stockage (Object Storage)
-resource "ovh_cloud_project_storage_container" "mon_stockage" {
-  service_name = "TON_PROJECT_ID" # L'ID de ton projet Public Cloud OVH
-  region       = "GRA"            # Région Gravelines
-  name         = "stockage-devops-output"
-  type         = "private"        # Peut être 'public' ou 'private'
+resource "ovh_cloud_project_storage" "my-bucket" {
+ service_name = "my_service_name" # Replace with your OVHcloud project ID
+ region_name = "GRA" # Replace with the desired region in uppercase.
+  name = "object-storage-simple"
+  versioning = {
+    status = "enabled"
+  }
 }
 
