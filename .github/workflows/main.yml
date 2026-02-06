@@ -3,8 +3,7 @@ name : Test
 on: [push,pull_request]
 
 jobs:
-  test:
-  runs on : ubuntu 22.04
+  runs-on : ubuntu-latest
   steps : 
     -uses: action/checkout@v4
     -run: echo "no tests yet"
